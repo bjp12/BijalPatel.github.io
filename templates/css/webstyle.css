@@ -155,3 +155,19 @@ p{
 a{
 	font-family:"Quicksand";
 }
+
+.projecttitle {
+	text-align: center;
+	font-size: 25px;
+	padding-top: 20px;
+	font-weight: bold;
+}
+.projectcontainer img{
+	width: 100%;
+}
+
+.projectcontainer .row img{
+	width: 50%;
+	height: 100%;
+
+}

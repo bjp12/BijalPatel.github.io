@@ -11,7 +11,7 @@ def home():
 
 @app.route('/projects')
 def projects():
-	return render_template('construction.html')
+	return render_template('projects.html')
 
 @app.route('/photography')
 def photography():
