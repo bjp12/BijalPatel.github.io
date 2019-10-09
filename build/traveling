@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Advent+Pro|Arizonia|Cookie|Inconsolata|Noto+Sans+TC|Pacifico|Quicksand|Sacramento|ZCOOL+XiaoWei" rel="stylesheet">	
+	<title>Traveling</title>
+	<style type="text/css">
+		* {
+		  box-sizing: border-box;
+		}
+		.bgimage{
+			background-image: url("static/images/traveling.jpg");
+			background-position: center 50%;
+		}
+		.banner{
+			width: 100%;
+			height: 650px; 
+			border: 0px;
+			margin-top: 0px;
+			object-fit: cover;
+		}
+		.header .name{
+			color: #c4a6dd;
+		}
+		
+		h2{
+			text-align: center;
+			font-family: "Advent Pro";
+			font-size: 50px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-left: 300px;
+			margin-right: 300px;
+			color: white;
+			background-color: rgba(0,0,0,0.35);
+		}
+		.col-6 {
+		  float: left;
+		  width: 50%;
+		  padding: 5px;
+		}
+		.row{
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		.location{
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			font-size: 30px;
+		}
+		img{
+			width: 100%;
+			margin-top: 12px;
+			border-radius: 0px;
+			border: 5px solid white;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<style>.header{
+	background-color: #c4a6dd;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 140px;	
+}
+
+.name{
+	text-decoration: none;
+	font-family: "Sacramento";
+	font-size: 60px;
+	text-align: left;
+	color: white;
+}
+.name:hover{
+	color: white;
+}
+
+li a{
+	color:white;
+	font-size: 20px;
+}
+
+li a:hover{
+	color: white;
+}
+
+.header h1{
+	font-size: 60px;
+	color: white;
+}
+.links{
+	padding-right: 80px;
+}
+.postcard{
+	/*padding-bottom: 30px;*/
+	/*color: white;*/
+	font-family:"Quicksand";
+}
+.aboutme p{
+	padding: 80px;
+	padding-top: 0px;
+	padding-bottom: 40px;
+}
+.aboutme h3{
+	padding-left: 80px;
+	padding-top: 10%;
+}
+.caption{
+	position: absolute;
+	top:15%;
+	text-align: center;
+	font-size: 25px;
+	width:90%;
+	opacity: 0;
+}
+/*.interets {
+	height: 100px;
+}*/
+.interests a{
+	height: 70%;
+	color: black;
+	margin-top: 5%;
+}
+
+.interest {
+	height: 150px;
+}
+
+.cooking:hover a{
+	opacity: 1;
+}
+
+.cooking:hover img{
+	opacity: .5;
+}
+
+.photography:hover a{
+	opacity: 1;
+}
+
+.photography:hover img{
+	opacity: .5;
+}
+
+.teaching:hover a{
+	opacity: 1;
+}
+
+.teaching:hover img{
+	opacity: .5;
+}
+
+.traveling:hover a{
+	opacity: 1;
+}
+
+.traveling:hover img{
+	opacity: .5;
+}
+
+.biopic img{
+	/*border: 5px solid white;*/
+	border-radius: 0px;
+	display: block;
+	float: right;
+	/*margin-left: 150px;*/
+	padding: 50px;
+	padding-right: 0;
+}
+.linebreak{
+	margin-left: 10%;
+	margin-right: 10%;
+	border-top: 1px solid #b0b3b7;
+	margin-bottom: 50px;
+}
+.bottom h3{
+	text-align: center;
+	font-family: "Quicksand";
+}
+.work{
+	border-right: 1px solid #b0b3b7;
+}
+.work a{
+	padding: 2%;
+}
+.logo{
+	display: inline-block;
+	transition: transform .2s;
+}
+.logo:hover{
+	transform: scale(1.25);
+}
+.projects a{
+	padding: 5%;
+	padding-top: 50px;
+}
+.footer{
+	height: 80px;
+	background-color: #c4a6dd; 
+}
+.footer a:hover{
+	text-decoration: none;
+}
+.overlay:hover p{
+	opacity: 1;
+	
+}
+.overlay:hover img{
+	opacity: .35; 
+}
+p{
+	font-family:"Quicksand";
+}
+a{
+	font-family:"Quicksand";
+}
+
+.projecttitle {
+	text-align: center;
+	font-size: 25px;
+	padding-top: 20px;
+	font-weight: bold;
+}
+.projectcontainer img{
+	width: 100%;
+}
+
+.projectcontainer .row img{
+	width: 50%;
+	height: 100%;
+
+}</style>
+	
+	<div class="bgimage banner">
+		<nav class="navbar navbar-expand-sm justify-content-end header" style="background-color: transparent;">
+			<a class="navbar-brand name" href="/">Bijal Patel</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="links collapse navbar-collapse flex-grow-0 ml-auto mr-1">
+    <ul class="navbar-nav text-right">
+        <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">Interests</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="https://www.instagram.com/cookingwithbijal" style="font-size:14px" target="_blank">cooking</a>
+              <a class="dropdown-item" href="/photography" style="font-size:14px">photography</a>
+              <a class="dropdown-item" href="/teaching" style="font-size:14px">teaching</a>
+              <a class="dropdown-item" href="/traveling" style="font-size:14px">traveling</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+        </li>
+    </ul>
+</div>
+		</nav>
+		<h2 style="margin-top: 75px;"> my travels </h2>
+	</div>
+	<div class="row">
+		<div class="col-6" style="padding-left: 10px">
+			<div class="overlay">
+				<img src="static/images/traveling1.jpg">
+				<p class="location" style="top: 180px"> Chicago, IL </p>
+			</div>
+			<div class="overlay">
+				<img src="static/images/photography2.jpg">
+				<p class="location" style="top: 580px"> Santa Barbara, CA</p>
+			</div>
+			<div class="overlay">
+				<img src="static/images/traveling2.jpg">
+				<p class="location" style="top: 980px"> Atlanta, GA</p>
+			</div>
+			
+		</div>
+		<div class="col-6" style="padding-right: 10px">
+			<div class="overlay">
+				<img src="static/images/photography7.jpg">
+				<p class="location" style="top: 170px"> Mt. Diablo, CA</p>
+			</div>
+			<div class="overlay">
+				<img src="static/images/photography8.jpg">
+				<p class="location" style="top: 700px"> Los Angeles, CA</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+	<p style="color: white; text-align: center; padding-top: 20px; font-size: 24px">bijal patel       
+		<a href="https://www.linkedin.com/in/bijaljpatel/" target=”_blank”>
+			<span style="padding-left: 10px; color: white">
+					<i class="fab fa-linkedin"></i>
+			</span>
+		</a>
+		<a href="#" target=”_blank”>
+			<span style="color: white">
+					<i class="fab fa-github-square"></i>
+			</span>
+		</a>
+	</p>
+	
+</div>
+</body>
+</html>
